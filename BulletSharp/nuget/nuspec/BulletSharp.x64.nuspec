@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>BulletSharp.x64</id>
+    <version>0.12.0</version>
+    <title>BulletSharp (x64)</title>
+    <authors>Andres Traks, Doug Slater</authors>
+    <owners>Andres Traks, Doug Slater</owners>
+    <license type="file">license.txt</license>
+    <projectUrl>https://github.com/slater1/BulletSharpPInvoke</projectUrl>
+    <icon>bullet_logo_64x64.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A wrapper for the Bullet physics engine for .NET Standard 2.0 (x64)</description>
+    <summary>A wrapper for the Bullet physics engine for .NET Standard 2.0 (x64)</summary>
+    <releaseNotes>This is a fork of the double-precision branch of https://github.com/AndresTraks/BulletSharpPInvoke. It supports x64 architecture only</releaseNotes>
+    <tags>Collision Bullet Physics</tags>
+    <!-- https://github.com/NuGet/Home/wiki/Packaging-Documentation-within-the-nupkg -->
+    <!-- https://github.com/NuGet/Home/issues/6873 -->
+    <!-- <readme>readme.md</readme> -->
+    <dependencies>
+      <group targetFramework="netstandard2.0" >
+      </group>
+    </dependencies>
+    <references>
+      <group targetFramework="netstandard2.0" >
+        <reference file="BulletSharp.dll" />
+      </group>
+    </references>
+  </metadata>
+  
+  <files>
+    <file src="..\..\bullet_logo_64x64.png" target="bullet_logo_64x64.png" />
+    <file src="..\..\license.txt" target="license.txt" />
+    <file src="..\..\bin\x64\Release\netstandard2.0\libbulletc.dll" target="build" />
+    <file src="..\..\bin\x64\Release\netstandard2.0\BulletSharp.x64.props" target="build\BulletSharp.x64.props" />
+    
+    <file src="..\..\bin\x64\Release\netstandard2.0\BulletSharp.dll" target="lib\netstandard2.0" />
+    <file src="..\..\bin\x64\Release\netstandard2.0\BulletSharp.pdb" target="lib\netstandard2.0" />
+    <file src="..\..\bin\x64\Release\netstandard2.0\BulletSharp.deps.json" target="lib\netstandard2.0" />
+
+    <file src="..\..\bin\x64\Release\netstandard2.0\BulletSharp.dll" target="ref\netstandard2.0" />
+    
+    <file src="..\md\BulletSharp.x64.md" target="readme.md"/>
+  </files>
+
+</package>

@@ -48,4 +48,14 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="BulletSharp.x64.props">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo copy $(ProjectDir)..\libbulletc\build-vs142\lib\Release\libbulletc.dll $(OutDir)&#xD;&#xA;copy $(ProjectDir)..\libbulletc\build-vs142\lib\Release\libbulletc.dll $(OutDir)" />
+  </Target>
+
 </Project>
